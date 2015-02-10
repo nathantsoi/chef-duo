@@ -1,3 +1,9 @@
+in your Berksfile:
+
+```
+cookbook 'duo', git: 'git://github.com/nathantsoi/chef-duo.git'
+```
+
 include the default recipe to install with pam configuration
 
 create a unix integration and set the following keys
