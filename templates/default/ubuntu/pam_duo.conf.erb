@@ -1,0 +1,9 @@
+[duo]
+; Duo integration key
+ikey = <%= node['duo']['keys']['integration'] %>
+; Duo secret key
+skey = <%= node['duo']['keys']['secret'] %>
+; Duo API hostname
+host = <%= node['duo']['keys']['host'] %>
+pushinfo = yes
+autopush = yes
