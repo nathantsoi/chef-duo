@@ -42,7 +42,7 @@ open a root shell to make sure you still have access if things break
 restart ssh
 
 ```
-sudo service sshd restart
+sudo service ssh restart
 ```
 
 if it doesnt come back (no pid is shown with the start message), run ssh w/o upstart and look for error messages
