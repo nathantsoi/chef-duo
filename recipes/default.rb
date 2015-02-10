@@ -22,13 +22,14 @@ bash 'compile_pam' do
   make
   make install
   EOH
+  not_if "readelf -a -W /lib64/security/pam_duo.so|grep SONAME|grep '0x000000000000000e'"
 end
 
 template '/etc/duo/pam_duo.conf' do
   source "#{node['platform']}/pam_duo.conf.erb"
   owner  'root'
   group  'root'
-  mode   '0700'
+  mode   '0600'
 end
 
 template '/etc/pam.d/common-auth' do
