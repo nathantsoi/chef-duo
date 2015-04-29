@@ -13,3 +13,4 @@ recipe 'duo', 'Install duo security for unix '
 end
 
 depends 'git'
+depends 'openssh'

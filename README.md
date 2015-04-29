@@ -23,18 +23,16 @@ override_attributes(
 )
 ```
 
-ensure the following are set in /etc/ssh/sshd_config
+the following ssh config defaults are set:
 
 ```
-UsePAM yes
-ChallengeResponseAuthentication yes
-UseDNS no
-Public Key Authentication
-PubkeyAuthentication yes
-PasswordAuthentication no
-AuthenticationMethods publickey,keyboard-interactive
-# for debugging and better auditing
-LogLevel VERBOSE
+default['openssh']['server']['use_pam'] = 'yes'
+default['openssh']['server']['challenge_response_authentication'] = 'yes'
+default['openssh']['server']['use_dns'] = 'no'
+default['openssh']['server']['pubkey_authentication'] = 'yes'
+default['openssh']['server']['password_authentication'] = 'no'
+default['openssh']['server']['authentication_methods'] = 'publickey,keyboard-interactive'
+default['openssh']['server']['log_level'] = 'VERBOSE'
 ```
 
 open a root shell to make sure you still have access if things break
