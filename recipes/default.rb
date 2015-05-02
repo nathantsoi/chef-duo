@@ -45,3 +45,6 @@ template '/etc/pam.d/sshd' do
   group  'root'
   mode   '0755'
 end
+
+# configure ssh
+include_recipe 'openssh::default'
