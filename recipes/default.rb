@@ -16,6 +16,10 @@ when 'redhat', 'centos', 'fedora'
   end
 end
 
+directory "#{Chef::Config[:file_cache_path]}/duo" do
+  action :create
+end
+
 remote_file "#{Chef::Config[:file_cache_path]}/duo/#{node[:duo][:tarball_version]}" do
   source "#{node[:duo][:tarball_path]}#{node[:duo][:tarball_version]}"
   checksum '415cf02981f66ba9447df81e2fcf41e004220126640cc5f667720d46c431abf9'
