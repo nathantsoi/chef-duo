@@ -34,7 +34,6 @@ bash 'compile_pam' do
   mkdir src
   tar xzf #{node[:duo][:tarball_version]} --directory src
   cd src/duo_unix-*
-  ./bootstrap
   ./configure --with-pam --prefix=/usr
   make
   make install
