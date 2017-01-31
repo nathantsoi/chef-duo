@@ -5,5 +5,9 @@ ikey = <%= node['duo']['keys']['integration'] %>
 skey = <%= node['duo']['keys']['secret'] %>
 ; Duo API hostname
 host = <%= node['duo']['keys']['host'] %>
-pushinfo = yes
-autopush = yes
+; Local groups and exclusions
+<% if node['duo']['groups'] %>
+groups = <%= node['duo']['groups'] %>
+<% end %>
+pushinfo = <%= node['duo']['pushinfo'] %>
+autopush = <%= node['duo']['autopush'] %>
