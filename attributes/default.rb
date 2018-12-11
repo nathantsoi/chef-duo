@@ -5,7 +5,9 @@ default['duo']['keys'] = {
 }
 
 default['duo']['tarball_path'] = 'https://dl.duosecurity.com/'
+# see https://duo.com/docs/checksums#duo-unix for updates
 default['duo']['tarball_version'] = 'duo_unix-1.9.14.tar.gz'
+default['duo']['tarball_checksum'] = '415cf02981f66ba9447df81e2fcf41e004220126640cc5f667720d46c431abf9'
 
 default['duo']['git_repo'] = 'https://github.com/duosecurity/duo_unix.git'
 default['duo']['git_rev'] = 'master'
